@@ -10,7 +10,7 @@ image:
 
 configMap:
   enabled: true
-  as: env
+  as: file
 
 ingress:
   enabled: true
