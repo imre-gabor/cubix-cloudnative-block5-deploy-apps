@@ -4,13 +4,18 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
-env:
-- name: SPRING_DATASOURCE_PASSWORD
+# env:
+# - name: SPRING_DATASOURCE_PASSWORD
   #value: <<SET WITH INSTALLATION>>
 
 configMap:
   enabled: true
   as: file
+
+secret:
+- envName: SPRING_DATASOURCE_PASSWORD
+  secretName: db-password
+  secretKey: password
 
 ingress:
   enabled: false
