@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "spring-cubix.labels" . | nindent 4 }}
 spec:
-  podMetricsEndpoints::
+  podMetricsEndpoints:
     - port: management
       path: /actuator/prometheus
   selector:
